@@ -4,28 +4,57 @@
     <title>Li Mingdong's Résumé</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" type="text/css" href="http://blog.tdoly.com/resume/assets/css/style.css" />
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script type="text/javascript">
+        function showtel() {
+            var url = window.location.href;
+            console.log(url);
+            var tel = "";
+            if(url.indexOf("?") != -1 && url.indexOf("tel") != -1) {
+                tel=url.substr(1).split("=")[1];
+                console.log(tel);
+            }
+            if(tel != "") {
+                var htmlString = "<label>电话<span class='colon'>:</span></label>";
+                htmlString += "<span class='value'>";
+                htmlString += tel;
+                htmlString += "</span>";
+                console.log(htmlString);
+                $("#tel").html(htmlString);
+            }
+        }
+    </script>
 </head>
-<body>
-
+<body onload="showtel()">
     <div id="main">
         <h1 id="title">李明东</h1>
         <div class="basic-info section">
-            <h2 class="title">联系信息</h2>
+            <h2 class="title">个人信息</h2>
+            <input type="hidden" value="1" id="test"></input>
                 <div class="set">
+                   
                     <p class="address">
                         <span class="value">
                             现居北京
                         </span>
                     </p>
+                    <p class="birthday">
+                        <span class="value">
+                            出生年月：1990年9月
+                        </span>
+                    </p>
                     <div class="r">
+                        <p class="tel" id="tel">
+                        </p>
                         <p class="email">
-                        <label>邮箱<span class="colon">:</span></label> 
-                        <span class="value"><a href="mailto:tdolydong@gmail.com">tdolydong@gmail.com</a></span>
+                            <label>邮箱<span class="colon">:</span></label> 
+                            <span class="value"><a href="mailto:tdolydong@gmail.com">tdolydong@gmail.com</a></span>
                         </p>
                     
                         <p class="website">
-                        <label>个人博客<span class="colon">:</span></label> 
-                        <span class="value"><a href="http://blog.tdoly.com">http://blog.tdoly.com</a></span></p>
+                            <label>个人博客<span class="colon">:</span></label> 
+                            <span class="value"><a href="http://blog.tdoly.com">http://blog.tdoly.com</a></span>
+                        </p>
                     
                     </div>
                 <div class="clear"> </div>
