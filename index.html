@@ -8,18 +8,18 @@
     <script type="text/javascript">
         function showtel() {
             var url = window.location.href;
-            console.log(url);
+            // console.log(url);
             var tel = "";
             if(url.indexOf("?") != -1 && url.indexOf("tel") != -1) {
                 tel=url.substr(1).split("=")[1];
-                console.log(tel);
+                // console.log(tel);
             }
             if(tel != "") {
                 var htmlString = "<label>电话<span class='colon'>:</span></label>";
                 htmlString += "<span class='value'>";
                 htmlString += tel;
                 htmlString += "</span>";
-                console.log(htmlString);
+                // console.log(htmlString);
                 $("#tel").html(htmlString);
             }
         }
@@ -61,19 +61,39 @@
             </div><!-- set //-->
             <div class="clear"> </div>
         </div><!-- basic-info //-->
+
+        <div class="section section-work">
+            <h2 class="title">技能</h2>
+            <div class="set">
+                <div class="item">
+                    <span class="info">
+                        <ul>
+                            <li>常用语言：java（spring+ibatis开发），python（数据处理及其他）；</li>
+                            <li>数据库：mysql；</li>
+                            <li>NoSql：memcached，tair；</li>
+                            <li>版本控制：git，svn；</li>
+                            <li>其他：maven，ant，js，json，jsp，jstl，xml；</li>
+                            <li>IDE和编辑器：Eclipse，Sublime Text（Windows环境下），vim（Liunx环境下）；</li>
+                       </ul>
+                    </span>
+                    <span class="clear"> </span>
+                </div>
+            </div>
+            <div class="clear"> </div>
+        </div>
             
         <div class="section section-work">
             <h2 class="title">工作经历</h2>
             <div class="set">
                 <div class="item">
-                    <h3><span class="company l">北京传美科技有限公司</span>
+                    <h3><span class="company l">北京传美科技有限公司（<a href="http://www.moyoyo.com" target="_blank">www.moyoyo.com</a>）</span>
                         <span class="date r">2012年8月 &mdash; 至今</span>
                     </h3>
                     <span class="clear"> </span>
                     <span class="job_title">软件开发工程师</span>
                     <span class="info">
                         <ul>
-                            <li> 使用java，spring，ibatis，lucene，activemq，xslt，jsp等技术维护及开发公司wap站和web站；</li>
+                            <li>使用java，spring，ibatis，lucene，activemq，xslt，jsp等技术维护及开发公司wap站和web站；</li>
                             <li>参与主站触屏版及web新版首页开发的项目；</li>
                             <li>参与主站数据库拆分及tair，memcached缓存层添加的项目；</li>
                             <li>参与wap版本向web版本功能迁移到项目；</li>
@@ -86,7 +106,7 @@
                 </div>
                         
                 <div class="item">
-                    <h3><span class="company l">当乐网</span>
+                    <h3><span class="company l">当乐网（<a href="http://d.cn" target="_blank">d.cn</a>）</span>
                         <span class="date r">2012年7月 &mdash; 2012年8月</span>
                     </h3>
                     <span class="clear"> </span>
